@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NFL Predictor</title>
+<style>
+  :root {
+    --bg: #f7f7f8;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #1d4ed8;
+    --win: #059669;
+    --header-bg: #111827;
+    --header-text: #f9fafb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --card: #1a1d23;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #2d313a;
+      --accent: #60a5fa;
+      --win: #34d399;
+      --header-bg: #05070a;
+      --header-text: #f9fafb;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+  header p { margin: 0; color: #9ca3af; font-size: 0.9rem; }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .accuracy {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .accuracy .stat { font-size: 1.6rem; font-weight: 700; }
+  .accuracy .label { font-size: 0.8rem; color: var(--muted); display: block; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+  .pick { font-weight: 700; color: var(--win); }
+  .conf { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .parlay-list { list-style: none; padding: 0; margin: 0; }
+  .parlay-list li {
+    display: flex; justify-content: space-between;
+    padding: 0.4rem 0; border-bottom: 1px solid var(--border);
+  }
+  .parlay-list li:last-child { border-bottom: none; }
+  .combined { margin-top: 0.75rem; font-weight: 700; }
+  .note, footer { color: var(--muted); font-size: 0.8rem; }
+  footer { text-align: center; padding: 1.5rem 1rem 2.5rem; }
+  #status { text-align: center; padding: 3rem 1rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏈 NFL Predictor</h1>
+  <p id="subtitle">Pronósticos automáticos generados cada lunes</p>
+</header>
+<main>
+  <div id="status">Cargando pronósticos…</div>
+  <div id="content" style="display:none">
+    <div class="card" id="accuracy-card" style="display:none">
+      <div class="accuracy">
+        <div>
+          <span class="stat" id="acc-pct">—</span>
+          <span class="label">Aciertos históricos (moneyline)</span>
+        </div>
+        <div>
+          <span class="stat" id="acc-count">—</span>
+          <span class="label">Partidos calificados</span>
+        </div>
+        <div>
+          <span class="stat" id="acc-mae">—</span>
+          <span class="label">Error promedio en total de puntos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th><th>Partido</th><th>Pick</th><th>Prob.</th>
+              <th>Marcador proyectado</th><th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="games-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" id="parlay-card" style="display:none">
+      <h3 style="margin-top:0">Parlay sugerido (mayor confianza)</h3>
+      <ul class="parlay-list" id="parlay-list"></ul>
+      <p class="combined" id="parlay-combined"></p>
+      <p class="note">Probabilidad del modelo propio (Elo + estadísticas), no viene de una casa de apuestas real.</p>
+    </div>
+  </div>
+</main>
+<footer>
+  Pronóstico analítico/informativo, no garantiza resultados. Apuesta con responsabilidad.<br>
+  <a href="latest.json">JSON crudo</a> · <a href="https://github.com/copadov/nfl-predictor">Código en GitHub</a>
+</footer>
+
+<script>
+async function load() {
+  const statusEl = document.getElementById("status");
+  try {
+    const res = await fetch("latest.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    render(data);
+  } catch (err) {
+    statusEl.textContent = "No se pudo cargar latest.json (" + err.message + ").";
+  }
+}
+
+function render(data) {
+  document.getElementById("status").style.display = "none";
+  document.getElementById("content").style.display = "block";
+
+  if (data.status !== "ok") {
+    document.getElementById("subtitle").textContent = "Sin temporada activa en este momento.";
+    return;
+  }
+
+  document.getElementById("subtitle").textContent =
+    `Temporada ${data.season} · Semana ${data.week} · actualizado ${new Date(data.generated_at).toLocaleString("es-MX")}`;
+
+  const acc = data.accuracy_historica;
+  if (acc && acc.total_gradado) {
+    document.getElementById("accuracy-card").style.display = "block";
+    document.getElementById("acc-pct").textContent = acc.pct_acierto_moneyline + "%";
+    document.getElementById("acc-count").textContent = acc.aciertos_moneyline + "/" + acc.total_gradado;
+    document.getElementById("acc-mae").textContent = (acc.mae_total_puntos ?? "—") + " pts";
+  }
+
+  const tbody = document.getElementById("games-body");
+  tbody.innerHTML = "";
+  (data.predicciones || []).forEach(p => {
+    const tr = document.createElement("tr");
+    const fecha = new Date(p.gameday + "T00:00:00").toLocaleDateString("es-MX", { weekday: "short", month: "short", day: "numeric" });
+    tr.innerHTML = `
+      <td>${fecha}</td>
+      <td>${p.away_team} @ ${p.home_team}</td>
+      <td class="pick">${p.moneyline_pick}</td>
+      <td class="conf">${(p.moneyline_confidence * 100).toFixed(1)}%</td>
+      <td>${p.away_team} ${p.pred_away_score} - ${p.pred_home_score} ${p.home_team}</td>
+      <td>${p.pred_total_points}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  const parlay = data.parlay_sugerido || [];
+  if (parlay.length) {
+    document.getElementById("parlay-card").style.display = "block";
+    const list = document.getElementById("parlay-list");
+    list.innerHTML = "";
+    parlay.forEach(leg => {
+      const li = document.createElement("li");
+      li.innerHTML = `<span>${leg.rank}. <strong>${leg.pick}</strong> gana</span><span>${(leg.win_prob * 100).toFixed(1)}%</span>`;
+      list.appendChild(li);
+    });
+    const combined = parlay[parlay.length - 1].combined_prob_up_to_here;
+    document.getElementById("parlay-combined").textContent =
+      "Probabilidad combinada estimada: " + (combined * 100).toFixed(1) + "%";
+  }
+}
+
+load();
+</script>
+</body>
+</html>
