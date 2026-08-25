@@ -41,6 +41,8 @@ jobs:
       #     echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-key.json" >> "$GITHUB_ENV"
 
       - name: Correr actualización semanal
+        env:
+          PYTHONPATH: src
         run: |
           python -m nfl_predictor.cli run-weekly \
             --backend sqlite \
