@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/*.db
+data/*.csv
+!data/.gitkeep
+!data/nfl_predictor.db
+*.json
+!docs/*.json
+.DS_Store
+*.key.json
+gcp-key.json

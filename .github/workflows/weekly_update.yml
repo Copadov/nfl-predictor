@@ -1,0 +1,56 @@
+name: Actualización semanal NFL Predictor
+
+on:
+  schedule:
+    # 04:00 UTC los martes = 22:00 hora Ciudad de México los lunes
+    # (México no tiene horario de verano desde 2022, así que este
+    # horario es fijo todo el año, sin necesidad de ajustarlo).
+    - cron: "0 4 * * 2"
+  workflow_dispatch: {}  # permite correrlo manualmente desde la pestaña Actions
+
+permissions:
+  contents: write  # necesario para que el job pueda hacer commit del resumen a docs/
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      # NOTA: mientras la facturación de GCP no esté activa (BigQuery la
+      # requiere incluso en el free tier), este workflow corre con el
+      # backend SQLite. Como cada corrida es una VM nueva de GitHub
+      # Actions, el archivo data/nfl_predictor.db se commitea junto con
+      # docs/ para que el histórico de Elo y el grading semanal
+      # persistan entre corridas. Para volver a BigQuery una vez que
+      # tengas facturación activa: descomenta el paso "Autenticar con
+      # GCP" de abajo, cambia --backend a bigquery y agrega
+      # --gcp-project/--bq-dataset (y los secrets GCP_PROJECT_ID /
+      # GCP_SERVICE_ACCOUNT_KEY en Settings → Secrets).
+
+      # - name: Autenticar con GCP
+      #   run: |
+      #     echo '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}' > /tmp/gcp-key.json
+      #     echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-key.json" >> "$GITHUB_ENV"
+
+      - name: Correr actualización semanal
+        run: |
+          python -m nfl_predictor.cli run-weekly \
+            --backend sqlite \
+            --sqlite-path "data/nfl_predictor.db" \
+            --out-dir "docs"
+
+      - name: Publicar resumen (commit a docs/ y data/)
+        run: |
+          git config user.name "nfl-predictor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/ data/nfl_predictor.db
+          git diff --staged --quiet || git commit -m "Actualización semanal: $(date -u +%Y-%m-%d)"
+          git push
