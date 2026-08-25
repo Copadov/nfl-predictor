@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T02:27:00.786381+00:00",
+  "generated_at": "2026-08-25T02:33:17.771613+00:00",
   "status": "ok",
   "season": 2026,
   "week": 1,
@@ -25,7 +25,7 @@
       "pred_total_points": 41.4,
       "moneyline_pick": "SEA",
       "moneyline_confidence": 0.7039,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -43,7 +43,7 @@
       "pred_total_points": 51.5,
       "moneyline_pick": "LA",
       "moneyline_confidence": 0.6594,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -61,7 +61,7 @@
       "pred_total_points": 44.4,
       "moneyline_pick": "CHI",
       "moneyline_confidence": 0.569,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -79,7 +79,7 @@
       "pred_total_points": 49.4,
       "moneyline_pick": "CIN",
       "moneyline_confidence": 0.5492,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -97,7 +97,7 @@
       "pred_total_points": 47.8,
       "moneyline_pick": "DET",
       "moneyline_confidence": 0.7679,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -115,7 +115,7 @@
       "pred_total_points": 45.9,
       "moneyline_pick": "HOU",
       "moneyline_confidence": 0.5403,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -133,7 +133,7 @@
       "pred_total_points": 48.5,
       "moneyline_pick": "BAL",
       "moneyline_confidence": 0.5405,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -151,7 +151,7 @@
       "pred_total_points": 42.7,
       "moneyline_pick": "JAX",
       "moneyline_confidence": 0.7562,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -169,7 +169,7 @@
       "pred_total_points": 45.7,
       "moneyline_pick": "PIT",
       "moneyline_confidence": 0.6458,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -187,7 +187,7 @@
       "pred_total_points": 48.2,
       "moneyline_pick": "TEN",
       "moneyline_confidence": 0.5743,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -205,7 +205,7 @@
       "pred_total_points": 44.4,
       "moneyline_pick": "LAC",
       "moneyline_confidence": 0.7404,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -223,7 +223,7 @@
       "pred_total_points": 42.6,
       "moneyline_pick": "MIA",
       "moneyline_confidence": 0.5793,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -241,7 +241,7 @@
       "pred_total_points": 40.1,
       "moneyline_pick": "MIN",
       "moneyline_confidence": 0.5744,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -259,7 +259,7 @@
       "pred_total_points": 42.9,
       "moneyline_pick": "PHI",
       "moneyline_confidence": 0.7442,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -277,7 +277,7 @@
       "pred_total_points": 51.0,
       "moneyline_pick": "NYG",
       "moneyline_confidence": 0.5079,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -295,7 +295,7 @@
       "pred_total_points": 41.2,
       "moneyline_pick": "DEN",
       "moneyline_confidence": 0.509,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     }
   ],
   "parlay_sugerido": [
@@ -307,7 +307,7 @@
       "pick": "DET",
       "win_prob": 0.7679,
       "combined_prob_up_to_here": 0.7679,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -317,7 +317,7 @@
       "pick": "JAX",
       "win_prob": 0.7562,
       "combined_prob_up_to_here": 0.58068598,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     },
     {
       "season": 2026,
@@ -327,7 +327,7 @@
       "pick": "PHI",
       "win_prob": 0.7442,
       "combined_prob_up_to_here": 0.43214650631600005,
-      "created_at": "2026-08-25T02:27:00.781793+00:00"
+      "created_at": "2026-08-25T02:33:17.746774+00:00"
     }
   ]
 }
