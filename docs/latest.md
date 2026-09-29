@@ -1,35 +1,35 @@
-# Pronósticos NFL — Temporada 2026, Semana 3
+# Pronósticos NFL — Temporada 2026, Semana 4
 
-**Historial del modelo:** 20/32 aciertos a ganador (62.5%), error promedio en total de puntos: 12.3 pts.
+**Historial del modelo:** 32/48 aciertos a ganador (66.7%), error promedio en total de puntos: 12.1 pts.
 
 ## Pronósticos de la semana
 
 | Partido | Pick | Prob. victoria | Marcador proyectado | Total proyectado |
 |---|---|---|---|---|
-| ATL @ GB | **GB** | 69.8% | ATL 24.5 - 21.7 GB | 46.2 |
-| LAC @ BUF | **BUF** | 73.1% | LAC 19.6 - 24.8 BUF | 44.4 |
-| CAR @ CLE | **CLE** | 55.9% | CAR 23.5 - 23.6 CLE | 47.1 |
-| NYJ @ DET | **DET** | 75.4% | NYJ 20.7 - 27.1 DET | 47.8 |
-| HOU @ IND | **HOU** | 52.2% | HOU 29.4 - 23.4 IND | 52.8 |
-| NE @ JAX | **JAX** | 55.7% | NE 18.0 - 23.7 JAX | 41.7 |
-| KC @ MIA | **KC** | 55.5% | KC 22.8 - 17.4 MIA | 40.2 |
-| TEN @ NYG | **NYG** | 66.1% | TEN 19.0 - 27.1 NYG | 46.1 |
-| CIN @ PIT | **PIT** | 55.5% | CIN 24.4 - 21.5 PIT | 45.9 |
-| SEA @ WAS | **SEA** | 65.6% | SEA 25.6 - 17.4 WAS | 43.0 |
-| ARI @ SF | **SF** | 74.3% | ARI 21.2 - 26.3 SF | 47.5 |
-| MIN @ TB | **MIN** | 51.0% | MIN 24.1 - 18.5 TB | 42.6 |
-| BAL @ DAL | **BAL** | 51.4% | BAL 29.8 - 22.8 DAL | 52.6 |
-| LV @ NO | **NO** | 62.7% | LV 19.0 - 22.6 NO | 41.6 |
-| LA @ DEN | **DEN** | 56.8% | LA 22.7 - 22.2 DEN | 44.9 |
-| PHI @ CHI | **CHI** | 50.7% | PHI 23.5 - 25.7 CHI | 49.2 |
+| PIT @ CLE | **PIT** | 50.9% | PIT 18.7 - 18.8 CLE | 37.5 |
+| IND @ WAS | **WAS** | 56.4% | IND 26.5 - 26.6 WAS | 53.1 |
+| TEN @ BAL | **BAL** | 78.8% | TEN 19.9 - 27.1 BAL | 47.0 |
+| NE @ BUF | **BUF** | 67.3% | NE 22.8 - 22.6 BUF | 45.4 |
+| NYJ @ CHI | **CHI** | 73.5% | NYJ 18.9 - 26.1 CHI | 45.0 |
+| JAX @ CIN | **CIN** | 51.6% | JAX 23.9 - 21.8 CIN | 45.7 |
+| DAL @ HOU | **HOU** | 66.0% | DAL 24.5 - 24.9 HOU | 49.4 |
+| ARI @ NYG | **NYG** | 59.5% | ARI 20.2 - 25.6 NYG | 45.8 |
+| LA @ PHI | **PHI** | 56.6% | LA 22.5 - 21.6 PHI | 44.1 |
+| GB @ TB | **TB** | 55.4% | GB 22.4 - 23.4 TB | 45.8 |
+| MIA @ MIN | **MIN** | 73.3% | MIA 14.6 - 24.6 MIN | 39.2 |
+| KC @ LV | **KC** | 58.0% | KC 21.0 - 19.3 LV | 40.3 |
+| LAC @ SEA | **SEA** | 75.5% | LAC 13.4 - 24.1 SEA | 37.5 |
+| DEN @ SF | **SF** | 59.4% | DEN 19.3 - 22.4 SF | 41.7 |
+| DET @ CAR | **DET** | 57.5% | DET 26.2 - 27.8 CAR | 54.0 |
+| ATL @ NO | **NO** | 56.9% | ATL 18.7 - 24.3 NO | 43.0 |
 
 ## Parlay sugerido (mayor confianza)
 
-1. **DET** gana — 75.4% de probabilidad
-2. **SF** gana — 74.3% de probabilidad
-3. **BUF** gana — 73.1% de probabilidad
+1. **BAL** gana — 78.8% de probabilidad
+2. **SEA** gana — 75.5% de probabilidad
+3. **CHI** gana — 73.5% de probabilidad
 
-Probabilidad combinada estimada: **41.0%**
+Probabilidad combinada estimada: **43.8%**
 
 _Nota: esta probabilidad es del modelo propio (basado en Elo + estadísticas), no viene de una casa de apuestas real. Sin una API de cuotas conectada todavía no podemos calcular el pago real del parlay ni comparar valor contra el mercado._
 
