@@ -1,32 +1,35 @@
-# Pronósticos NFL — Temporada 2026, Semana 11
+# Pronósticos NFL — Temporada 2026, Semana 12
 
-**Historial del modelo:** 93/150 aciertos a ganador (62.0%), error promedio en total de puntos: 11.3 pts.
+**Historial del modelo:** 103/163 aciertos a ganador (63.2%), error promedio en total de puntos: 11.3 pts.
 
 ## Pronósticos de la semana
 
 | Partido | Pick | Prob. victoria | Marcador proyectado | Total proyectado |
 |---|---|---|---|---|
-| IND @ HOU | **HOU** | 70.1% | IND 20.8 - 28.6 HOU | 49.4 |
-| MIA @ BUF | **BUF** | 83.0% | MIA 18.2 - 27.2 BUF | 45.4 |
-| BAL @ CAR | **CAR** | 51.1% | BAL 21.9 - 24.9 CAR | 46.8 |
-| NO @ CHI | **CHI** | 74.8% | NO 21.1 - 25.5 CHI | 46.6 |
-| TEN @ DAL | **DAL** | 73.1% | TEN 24.0 - 27.8 DAL | 51.8 |
-| TB @ DET | **DET** | 68.6% | TB 21.3 - 20.3 DET | 41.6 |
-| ARI @ KC | **KC** | 78.6% | ARI 18.1 - 25.5 KC | 43.6 |
-| JAX @ NYG | **JAX** | 61.3% | JAX 25.9 - 19.6 NYG | 45.5 |
-| NYJ @ LAC | **LAC** | 66.7% | NYJ 23.8 - 22.2 LAC | 46.0 |
-| LV @ DEN | **DEN** | 78.8% | LV 21.9 - 28.0 DEN | 49.9 |
-| PIT @ PHI | **PHI** | 50.8% | PIT 24.5 - 16.4 PHI | 40.9 |
-| MIN @ SF | **SF** | 60.3% | MIN 18.6 - 22.0 SF | 40.6 |
-| CIN @ WAS | **CIN** | 57.5% | CIN 27.3 - 21.4 WAS | 48.7 |
+| GB @ LA | **LA** | 65.6% | GB 22.9 - 22.9 LA | 45.8 |
+| CHI @ DET | **DET** | 62.0% | CHI 22.2 - 24.3 DET | 46.5 |
+| PHI @ DAL | **DAL** | 58.9% | PHI 23.0 - 27.2 DAL | 50.2 |
+| KC @ BUF | **BUF** | 66.2% | KC 22.0 - 23.8 BUF | 45.8 |
+| DEN @ PIT | **DEN** | 52.4% | DEN 22.5 - 20.9 PIT | 43.4 |
+| NO @ CIN | **CIN** | 75.0% | NO 21.0 - 28.2 CIN | 49.2 |
+| BAL @ HOU | **HOU** | 66.5% | BAL 20.8 - 27.4 HOU | 48.2 |
+| NYG @ IND | **IND** | 53.2% | NYG 25.0 - 20.7 IND | 45.7 |
+| TEN @ JAX | **JAX** | 84.2% | TEN 19.5 - 31.9 JAX | 51.4 |
+| NYJ @ MIA | **MIA** | 61.6% | NYJ 21.0 - 23.8 MIA | 44.8 |
+| ATL @ MIN | **MIN** | 73.4% | ATL 16.9 - 22.0 MIN | 38.9 |
+| NE @ LAC | **NE** | 54.5% | NE 25.7 - 21.6 LAC | 47.3 |
+| WAS @ ARI | **WAS** | 52.1% | WAS 25.1 - 18.9 ARI | 44.0 |
+| SEA @ SF | **SF** | 58.0% | SEA 23.5 - 24.4 SF | 47.9 |
+| LV @ CLE | **CLE** | 63.5% | LV 21.7 - 23.8 CLE | 45.5 |
+| CAR @ TB | **TB** | 65.2% | CAR 19.8 - 23.9 TB | 43.7 |
 
 ## Parlay sugerido (mayor confianza)
 
-1. **BUF** gana — 83.0% de probabilidad
-2. **DEN** gana — 78.8% de probabilidad
-3. **KC** gana — 78.6% de probabilidad
+1. **JAX** gana — 84.2% de probabilidad
+2. **CIN** gana — 75.0% de probabilidad
+3. **MIN** gana — 73.4% de probabilidad
 
-Probabilidad combinada estimada: **51.4%**
+Probabilidad combinada estimada: **46.4%**
 
 _Nota: esta probabilidad es del modelo propio (basado en Elo + estadísticas), no viene de una casa de apuestas real. Sin una API de cuotas conectada todavía no podemos calcular el pago real del parlay ni comparar valor contra el mercado._
 
